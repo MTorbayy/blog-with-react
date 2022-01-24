@@ -13,6 +13,16 @@ export default function Form() {
 
     const handleForm = e => {
         e.preventDefault()
+
+        dispatch({
+            type: 'ADDARTICLE',
+            payload: article
+        })
+
+        setArticle({
+            title: "",
+            body: ""
+        })
     }
 
     const handleInput = e => {
@@ -23,7 +33,6 @@ export default function Form() {
             const newObjState = {...article, body: e.target.value}
             setArticle(newObjState)
         }
-        console.log(article)
     }
 
 
