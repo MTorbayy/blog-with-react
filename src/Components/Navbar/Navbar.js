@@ -32,13 +32,13 @@ export default function Navbar() {
             {(toggleMenu || largeur > 500) && (
             <ul className="liste">
                 <li className="items">
-                    <Link to='/'>Accueil</Link>
+                    <Link to={process.env.PUBLIC_URL + '/'}>Accueil</Link>
                 </li>
                 <li className="items">
-                    <Link to='/ecrire'>écrire</Link>
+                    <Link to={process.env.PUBLIC_URL + '/ecrire'}>écrire</Link>
                 </li>
                 <li className="items">
-                    <Link to='/contact'>Contact</Link>
+                    <Link to={process.env.PUBLIC_URL + '/contact'}>Contact</Link>
                 </li>
             </ul>
             )}
