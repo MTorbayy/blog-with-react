@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/ecrire" element={<AddArticle />}/>
-        <Route path="/contact" element={<Contact />}/>
-        <Route path="/articles/:slug" element={<Article />}/>
+      <Routes basename={process.env.PUBLIC_URL}>
+        <Route path="/blog-with-react" element={<Home />}/>
+        <Route path="/blog-with-react/ecrire" element={<AddArticle />}/>
+        <Route path="/blog-with-react/contact" element={<Contact />}/>
+        <Route path="/blog-with-react/articles/:slug" element={<Article />}/>
       </Routes>
     </>
   );
